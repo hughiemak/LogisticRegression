@@ -145,7 +145,8 @@ function setup() {
   print(data);
   print(w);
 
- 
+
+	 
 
 }
 
@@ -272,6 +273,14 @@ function draw() {
 
   background('#222222');
 
+  fill(color('magenta'));
+  stroke('#222222');
+  text("Right click", width - 80, height - 30)
+
+  fill(255);
+  stroke('#222222');
+  text("Left click", width - 140,height - 30)
+
   for(var i=0;i<data.length;i++){
     // var x = map(data[i].x,0,1,0,width);
     var canvasPoint = decodeDataPoint(data[i].x, data[i].y);
@@ -292,6 +301,7 @@ function draw() {
    	stroke(c);
     
     ellipse(canvasPoint.x,canvasPoint.y,8,8);
+
   }
   if (data.length>1) {
   	descent(w,w,0.2,data);
